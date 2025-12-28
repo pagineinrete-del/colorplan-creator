@@ -8,7 +8,7 @@ import { CalendarView } from '@/components/CalendarView';
 import { ViewToggle } from '@/components/ViewToggle';
 import { PriorityFilter } from '@/components/PriorityFilter';
 import { AppointmentForm } from '@/components/AppointmentForm';
-import { Plus, Calendar, Sparkles } from 'lucide-react';
+import { Plus, Calendar } from 'lucide-react';
 import { addDays, addWeeks, addMonths, subDays, subWeeks, subMonths } from 'date-fns';
 import { Helmet } from 'react-helmet';
 
@@ -64,78 +64,60 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>ColorPlan - Organizza il tuo tempo, a colpo d'occhio</title>
-        <meta name="description" content="ColorPlan è un'app di gestione appuntamenti con priorità a colori. Organizza attività giornaliere, settimanali e mensili in modo semplice e intuitivo." />
+        <title>ColorPlan - Organizza il tuo tempo</title>
+        <meta name="description" content="ColorPlan è un'app di gestione appuntamenti con priorità a colori." />
       </Helmet>
 
-      <div className="min-h-screen bg-background">
-        {/* Header */}
-        <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b">
-          <div className="container mx-auto px-4 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="relative">
-                  <Calendar className="h-8 w-8 text-primary" />
-                  <Sparkles className="h-3 w-3 text-priority-medium absolute -top-0.5 -right-0.5" />
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold text-foreground">ColorPlan</h1>
-                  <p className="text-xs text-muted-foreground hidden sm:block">
-                    Organizza il tuo tempo, a colpo d'occhio
-                  </p>
-                </div>
-              </div>
-
-              <Button onClick={() => setIsFormOpen(true)} className="gap-2 shadow-md">
-                <Plus className="h-4 w-4" />
-                <span className="hidden sm:inline">Nuovo appuntamento</span>
-                <span className="sm:hidden">Nuovo</span>
-              </Button>
+      <div className="min-h-screen bg-background pb-20">
+        {/* Minimal Header */}
+        <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
+          <div className="px-4 py-3 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Calendar className="h-6 w-6 text-primary" />
+              <h1 className="text-lg font-semibold text-foreground">ColorPlan</h1>
             </div>
+            <PriorityFilter selected={filterPriority} onChange={setFilterPriority} />
           </div>
         </header>
 
-        {/* Main Content */}
-        <main className="container mx-auto px-4 py-6 space-y-6">
-          {/* Stats */}
-          <section className="animate-fade-in">
-            <StatsCards stats={stats} />
-          </section>
+        {/* Main Content - Vertical Stack */}
+        <main className="px-4 py-4 space-y-4">
+          {/* Stats - Compact */}
+          <StatsCards stats={stats} />
 
-          {/* Controls */}
-          <section className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between animate-fade-in" style={{ animationDelay: '100ms' }}>
-            <ViewToggle selected={viewType} onChange={setViewType} />
-            <PriorityFilter selected={filterPriority} onChange={setFilterPriority} />
-          </section>
+          {/* View Toggle */}
+          <ViewToggle selected={viewType} onChange={setViewType} />
 
-          {/* Main Grid */}
-          <section className="grid lg:grid-cols-3 gap-6 animate-fade-in" style={{ animationDelay: '150ms' }}>
-            {/* Calendar Area */}
-            <div className="lg:col-span-2">
-              <CalendarView
-                appointments={appointments}
-                selectedDate={selectedDate}
-                viewType={viewType}
-                onDateSelect={setSelectedDate}
-                onNavigate={handleNavigate}
-                onAppointmentClick={handleAppointmentClick}
-                onToggleComplete={toggleComplete}
-                onDelete={deleteAppointment}
-                getAppointmentsForDate={getAppointmentsForDate}
-              />
-            </div>
+          {/* Calendar */}
+          <CalendarView
+            appointments={appointments}
+            selectedDate={selectedDate}
+            viewType={viewType}
+            onDateSelect={setSelectedDate}
+            onNavigate={handleNavigate}
+            onAppointmentClick={handleAppointmentClick}
+            onToggleComplete={toggleComplete}
+            onDelete={deleteAppointment}
+            getAppointmentsForDate={getAppointmentsForDate}
+          />
 
-            {/* Sidebar - Today's Agenda */}
-            <div className="lg:col-span-1">
-              <TodayAgenda
-                appointments={todayAppointments}
-                onAppointmentClick={handleAppointmentClick}
-                onToggleComplete={toggleComplete}
-                onDelete={deleteAppointment}
-              />
-            </div>
-          </section>
+          {/* Today's Agenda */}
+          <TodayAgenda
+            appointments={todayAppointments}
+            onAppointmentClick={handleAppointmentClick}
+            onToggleComplete={toggleComplete}
+            onDelete={deleteAppointment}
+          />
         </main>
+
+        {/* Floating Action Button */}
+        <Button 
+          onClick={() => setIsFormOpen(true)} 
+          size="lg"
+          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg p-0"
+        >
+          <Plus className="h-6 w-6" />
+        </Button>
 
         {/* Appointment Form Modal */}
         <AppointmentForm

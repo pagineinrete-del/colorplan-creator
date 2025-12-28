@@ -43,20 +43,19 @@ export function StatsCards({ stats }: StatsCardsProps) {
   ];
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-      {cards.map((card, index) => (
+    <div className="flex gap-2 overflow-x-auto pb-1 -mx-4 px-4">
+      {cards.map((card) => (
         <Card 
           key={card.label} 
-          className="p-4 transition-all hover:shadow-md animate-fade-in"
-          style={{ animationDelay: `${index * 50}ms` }}
+          className="p-3 flex-shrink-0 min-w-[100px]"
         >
-          <div className="flex items-center gap-3">
-            <div className={`p-2.5 rounded-xl ${card.bg}`}>
-              <card.icon className={`h-5 w-5 ${card.color}`} />
+          <div className="flex items-center gap-2">
+            <div className={`p-1.5 rounded-lg ${card.bg}`}>
+              <card.icon className={`h-4 w-4 ${card.color}`} />
             </div>
             <div>
-              <p className="text-2xl font-bold">{card.value}</p>
-              <p className="text-xs text-muted-foreground">{card.label}</p>
+              <p className="text-lg font-bold leading-tight">{card.value}</p>
+              <p className="text-[10px] text-muted-foreground leading-tight">{card.label}</p>
             </div>
           </div>
         </Card>
