@@ -20,7 +20,7 @@ import { it } from 'date-fns/locale';
 const sampleAppointments: Appointment[] = [
   {
     id: '1',
-    title: '☕ Colazione',
+    title: 'Colazione',
     date: new Date(),
     time: '07:00',
     priority: 'personal',
@@ -28,7 +28,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '2',
-    title: '🧺 Lavatrice',
+    title: 'Lavatrice',
     date: new Date(),
     time: '07:30',
     priority: 'medium',
@@ -36,7 +36,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '3',
-    title: '📚 Studio concentrato',
+    title: 'Studio concentrato',
     description: 'Sessione di studio mattutina',
     date: new Date(),
     time: '07:30',
@@ -46,7 +46,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '4',
-    title: '🧺 Stendere lavatrice / riordino',
+    title: 'Stendere lavatrice / riordino',
     date: new Date(),
     time: '09:30',
     priority: 'medium',
@@ -54,7 +54,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '5',
-    title: '🍎 Spuntino',
+    title: 'Spuntino',
     date: new Date(),
     time: '10:30',
     priority: 'personal',
@@ -62,7 +62,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '6',
-    title: '📖 Lettura libro',
+    title: 'Lettura libro',
     description: 'Tarda mattina',
     date: new Date(),
     time: '10:45',
@@ -72,7 +72,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '7',
-    title: '⏱ Pianificazione progetto',
+    title: 'Pianificazione progetto',
     date: new Date(),
     time: '12:00',
     endTime: '12:30',
@@ -81,7 +81,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '8',
-    title: '🍽 Pranzo',
+    title: 'Pranzo',
     date: new Date(),
     time: '12:30',
     priority: 'personal',
@@ -89,7 +89,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '9',
-    title: '🍌 Spuntino',
+    title: 'Spuntino pomeridiano',
     date: new Date(),
     time: '13:30',
     priority: 'personal',
@@ -97,7 +97,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '10',
-    title: '🏋️ Allenamento',
+    title: 'Allenamento',
     date: new Date(),
     time: '14:00',
     endTime: '14:25',
@@ -106,7 +106,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '11',
-    title: '🚿 Doccia / recupero',
+    title: 'Doccia / recupero',
     date: new Date(),
     time: '14:25',
     endTime: '14:40',
@@ -115,7 +115,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '12',
-    title: '⏱ Pianificazione progetto (focus profondo)',
+    title: 'Pianificazione progetto (focus profondo)',
     date: new Date(),
     time: '14:40',
     endTime: '15:40',
@@ -124,7 +124,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '13',
-    title: '📚 Studio / ripasso',
+    title: 'Studio / ripasso',
     date: new Date(),
     time: '15:40',
     endTime: '17:30',
@@ -133,7 +133,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '14',
-    title: '📖 Lettura leggera o revisione',
+    title: 'Lettura leggera o revisione',
     description: 'Sera',
     date: new Date(),
     time: '18:00',
@@ -143,7 +143,7 @@ const sampleAppointments: Appointment[] = [
   },
   {
     id: '15',
-    title: '🍽 Cena',
+    title: 'Cena',
     date: new Date(),
     time: '19:30',
     priority: 'personal',
