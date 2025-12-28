@@ -6,115 +6,120 @@
 
 @layer base {
   :root {
-    /* Base colors - Clean light theme */
-    --background: 0 0% 98%;
-    --foreground: 220 20% 10%;
+    /* Base colors - Light gray theme */
+    --background: 0 0% 96%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 220 90% 56%;
-    --primary-foreground: 0 0% 100%;
+    /* Neon green primary */
+    --primary: 100 100% 45%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 20% 25%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 20%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 220 14% 93%;
-    --accent-foreground: 220 20% 15%;
+    --accent: 100 100% 45%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 220 90% 56%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 100 100% 45%;
 
     --radius: 0.75rem;
 
-    /* Priority colors - The heart of ColorPlan */
-    --priority-high: 0 84% 60%;
-    --priority-medium: 25 95% 53%;
-    --priority-low: 142 71% 45%;
-    --priority-personal: 210 100% 56%;
-    --priority-work: 270 70% 60%;
+    /* Priority colors - Gray shades with neon green accents */
+    --priority-high: 100 100% 45%;
+    --priority-medium: 0 0% 50%;
+    --priority-low: 0 0% 70%;
+    --priority-personal: 0 0% 40%;
+    --priority-work: 100 80% 35%;
 
-    /* Priority backgrounds (lighter versions) */
-    --priority-high-bg: 0 84% 95%;
-    --priority-medium-bg: 25 95% 93%;
-    --priority-low-bg: 142 71% 92%;
-    --priority-personal-bg: 210 100% 95%;
-    --priority-work-bg: 270 70% 95%;
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 90% 56%), hsl(250 90% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 90% 56% / 0.1), hsl(270 70% 60% / 0.1));
+    /* Priority backgrounds */
+    --priority-high-bg: 100 100% 92%;
+    --priority-medium-bg: 0 0% 92%;
+    --priority-low-bg: 0 0% 95%;
+    --priority-personal-bg: 0 0% 90%;
+    --priority-work-bg: 100 80% 90%;
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(220 20% 10% / 0.03);
-    --shadow-md: 0 4px 6px -1px hsl(220 20% 10% / 0.05), 0 2px 4px -2px hsl(220 20% 10% / 0.05);
-    --shadow-lg: 0 10px 15px -3px hsl(220 20% 10% / 0.08), 0 4px 6px -4px hsl(220 20% 10% / 0.05);
-    --shadow-card: 0 1px 3px 0 hsl(220 20% 10% / 0.04), 0 1px 2px -1px hsl(220 20% 10% / 0.04);
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.03);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.05), 0 2px 4px -2px hsl(0 0% 0% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.08), 0 4px 6px -4px hsl(0 0% 0% / 0.05);
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.04), 0 1px 2px -1px hsl(0 0% 0% / 0.04);
 
     /* Sidebar */
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 220 20% 25%;
-    --sidebar-primary: 220 90% 56%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 14% 96%;
-    --sidebar-accent-foreground: 220 20% 15%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 220 90% 56%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 100 100% 45%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 94%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 100 100% 45%;
   }
 
   .dark {
-    --background: 220 20% 8%;
-    --foreground: 220 10% 98%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 220 20% 10%;
-    --card-foreground: 220 10% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 220 20% 10%;
-    --popover-foreground: 220 10% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 220 90% 60%;
-    --primary-foreground: 0 0% 100%;
+    /* Neon green primary - brighter in dark mode */
+    --primary: 100 100% 50%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 220 20% 15%;
-    --secondary-foreground: 220 10% 90%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 85%;
 
-    --muted: 220 20% 15%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 220 20% 18%;
-    --accent-foreground: 220 10% 95%;
+    --accent: 100 100% 50%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 18%;
-    --input: 220 20% 18%;
-    --ring: 220 90% 60%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 100 100% 50%;
 
-    --priority-high-bg: 0 84% 20%;
-    --priority-medium-bg: 25 95% 20%;
-    --priority-low-bg: 142 71% 15%;
-    --priority-personal-bg: 210 100% 20%;
-    --priority-work-bg: 270 70% 20%;
+    /* Priority colors dark */
+    --priority-high: 100 100% 50%;
+    --priority-medium: 0 0% 60%;
+    --priority-low: 0 0% 50%;
+    --priority-personal: 0 0% 55%;
+    --priority-work: 100 80% 45%;
 
-    --sidebar-background: 220 20% 10%;
-    --sidebar-foreground: 220 10% 90%;
-    --sidebar-primary: 220 90% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 20% 15%;
-    --sidebar-accent-foreground: 220 10% 95%;
-    --sidebar-border: 220 20% 18%;
-    --sidebar-ring: 220 90% 60%;
+    --priority-high-bg: 100 100% 15%;
+    --priority-medium-bg: 0 0% 20%;
+    --priority-low-bg: 0 0% 18%;
+    --priority-personal-bg: 0 0% 18%;
+    --priority-work-bg: 100 80% 15%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 100 100% 50%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 100 100% 50%;
   }
 }
 
@@ -134,19 +139,19 @@
 
 @layer utilities {
   .priority-high {
-    @apply bg-priority-high text-white;
+    @apply bg-priority-high text-primary-foreground;
   }
   .priority-medium {
     @apply bg-priority-medium text-white;
   }
   .priority-low {
-    @apply bg-priority-low text-white;
+    @apply bg-priority-low text-foreground;
   }
   .priority-personal {
     @apply bg-priority-personal text-white;
   }
   .priority-work {
-    @apply bg-priority-work text-white;
+    @apply bg-priority-work text-primary-foreground;
   }
 }
 
@@ -157,18 +162,18 @@ html {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
   background: hsl(var(--muted));
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--muted-foreground) / 0.3);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

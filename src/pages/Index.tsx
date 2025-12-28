@@ -8,6 +8,7 @@ import { CalendarView } from '@/components/CalendarView';
 import { ViewToggle } from '@/components/ViewToggle';
 import { PriorityFilter } from '@/components/PriorityFilter';
 import { AppointmentForm } from '@/components/AppointmentForm';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { Plus, Calendar } from 'lucide-react';
 import { addDays, addWeeks, addMonths, subDays, subWeeks, subMonths } from 'date-fns';
 import { Helmet } from 'react-helmet';
@@ -73,10 +74,13 @@ const Index = () => {
         <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
           <div className="px-4 py-3 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Calendar className="h-6 w-6 text-primary" />
+              <Calendar className="h-5 w-5 text-primary" />
               <h1 className="text-lg font-semibold text-foreground">ColorPlan</h1>
             </div>
-            <PriorityFilter selected={filterPriority} onChange={setFilterPriority} />
+            <div className="flex items-center gap-1">
+              <PriorityFilter selected={filterPriority} onChange={setFilterPriority} />
+              <ThemeToggle />
+            </div>
           </div>
         </header>
 
