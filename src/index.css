@@ -38,19 +38,19 @@
 
     --radius: 0.75rem;
 
-    /* Priority colors - Gray shades with neon green accents */
-    --priority-high: 100 100% 45%;
-    --priority-medium: 0 0% 50%;
-    --priority-low: 0 0% 70%;
-    --priority-personal: 0 0% 40%;
-    --priority-work: 100 80% 35%;
+    /* Priority colors - Original vibrant colors */
+    --priority-high: 0 84% 60%;
+    --priority-medium: 38 92% 50%;
+    --priority-low: 142 76% 36%;
+    --priority-personal: 280 70% 55%;
+    --priority-work: 217 91% 60%;
 
     /* Priority backgrounds */
-    --priority-high-bg: 100 100% 92%;
-    --priority-medium-bg: 0 0% 92%;
-    --priority-low-bg: 0 0% 95%;
-    --priority-personal-bg: 0 0% 90%;
-    --priority-work-bg: 100 80% 90%;
+    --priority-high-bg: 0 84% 95%;
+    --priority-medium-bg: 38 92% 95%;
+    --priority-low-bg: 142 76% 95%;
+    --priority-personal-bg: 280 70% 95%;
+    --priority-work-bg: 217 91% 95%;
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.03);
@@ -100,17 +100,17 @@
     --ring: 100 100% 50%;
 
     /* Priority colors dark */
-    --priority-high: 100 100% 50%;
-    --priority-medium: 0 0% 60%;
-    --priority-low: 0 0% 50%;
-    --priority-personal: 0 0% 55%;
-    --priority-work: 100 80% 45%;
+    --priority-high: 0 84% 60%;
+    --priority-medium: 38 92% 50%;
+    --priority-low: 142 76% 45%;
+    --priority-personal: 280 70% 60%;
+    --priority-work: 217 91% 60%;
 
-    --priority-high-bg: 100 100% 15%;
-    --priority-medium-bg: 0 0% 20%;
-    --priority-low-bg: 0 0% 18%;
-    --priority-personal-bg: 0 0% 18%;
-    --priority-work-bg: 100 80% 15%;
+    --priority-high-bg: 0 84% 15%;
+    --priority-medium-bg: 38 92% 15%;
+    --priority-low-bg: 142 76% 15%;
+    --priority-personal-bg: 280 70% 15%;
+    --priority-work-bg: 217 91% 15%;
 
     --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 0 0% 85%;

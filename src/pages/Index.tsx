@@ -114,6 +114,11 @@ const Index = () => {
           />
         </main>
 
+        {/* Footer */}
+        <footer className="py-4 text-center text-xs text-muted-foreground">
+          App realizzata da GP
+        </footer>
+
         {/* Floating Action Button */}
         <Button 
           onClick={() => setIsFormOpen(true)} 
