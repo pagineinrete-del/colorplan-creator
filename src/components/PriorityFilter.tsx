@@ -19,39 +19,31 @@ export function PriorityFilter({ selected, onChange }: PriorityFilterProps) {
   };
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex items-center gap-1">
       <Button
-        variant={selected === 'all' ? 'default' : 'outline'}
+        variant={selected === 'all' ? 'default' : 'ghost'}
         size="sm"
         onClick={() => onChange('all')}
-        className="h-8"
+        className="h-7 px-2 text-xs"
       >
-        Tutti
+        All
       </Button>
       
       {priorities.map((priority) => (
-        <Button
+        <button
           key={priority}
-          variant={selected === priority ? 'default' : 'outline'}
-          size="sm"
           onClick={() => onChange(priority)}
           className={cn(
-            'h-8 gap-2',
-            selected === priority && 'ring-2 ring-offset-2',
-            selected === priority && priority === 'high' && 'bg-priority-high hover:bg-priority-high/90 ring-priority-high',
-            selected === priority && priority === 'medium' && 'bg-priority-medium hover:bg-priority-medium/90 ring-priority-medium',
-            selected === priority && priority === 'low' && 'bg-priority-low hover:bg-priority-low/90 ring-priority-low',
-            selected === priority && priority === 'personal' && 'bg-priority-personal hover:bg-priority-personal/90 ring-priority-personal',
-            selected === priority && priority === 'work' && 'bg-priority-work hover:bg-priority-work/90 ring-priority-work',
+            'h-5 w-5 rounded-full transition-all',
+            colorClasses[priority],
+            selected === priority && 'ring-2 ring-offset-1 ring-offset-background',
+            selected === priority && priority === 'high' && 'ring-priority-high',
+            selected === priority && priority === 'medium' && 'ring-priority-medium',
+            selected === priority && priority === 'low' && 'ring-priority-low',
+            selected === priority && priority === 'personal' && 'ring-priority-personal',
+            selected === priority && priority === 'work' && 'ring-priority-work',
           )}
-        >
-          <div className={cn(
-            'h-2.5 w-2.5 rounded-full',
-            selected !== priority && colorClasses[priority],
-            selected === priority && 'bg-white'
-          )} />
-          <span className="hidden sm:inline">{priorityConfig[priority].label}</span>
-        </Button>
+        />
       ))}
     </div>
   );

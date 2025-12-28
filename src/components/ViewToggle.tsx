@@ -16,7 +16,7 @@ export function ViewToggle({ selected, onChange }: ViewToggleProps) {
   ];
 
   return (
-    <div className="inline-flex rounded-lg border bg-card p-1 shadow-sm">
+    <div className="flex w-full rounded-lg border bg-card p-1">
       {views.map((view) => (
         <Button
           key={view.value}
@@ -24,12 +24,12 @@ export function ViewToggle({ selected, onChange }: ViewToggleProps) {
           size="sm"
           onClick={() => onChange(view.value)}
           className={cn(
-            'h-8 px-3 gap-2 rounded-md transition-all',
+            'flex-1 h-9 gap-1.5 rounded-md text-xs',
             selected === view.value && 'bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground'
           )}
         >
           {view.icon}
-          <span className="hidden sm:inline">{view.label}</span>
+          {view.label}
         </Button>
       ))}
     </div>
